@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+
+  traefik:
+    image: "traefik:v1.7.19"
+    container_name: "traefik"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    command:
+      - "--api"
+      - "--docker"
+      - "--logLevel=DEBUG"
+    volumes:
+      - "./config/traefik/traefik.toml:/etc/traefik/traefik.toml"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
