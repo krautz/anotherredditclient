@@ -2,6 +2,19 @@ version: "3"
 
 services:
 
+  redditmediator:
+    image: "krautzera/redditmediator:0.1.0"
+    container_name: "redditmediator"
+    expose:
+      - "8080"
+    environment:
+      - REDDIT_MEDIATOR_USER_USERNAME
+      - REDDIT_MEDIATOR_USER_PASSWORD
+      - REDDIT_MEDIATOR_APP_ID
+      - REDDIT_MEDIATOR_APP_SECRET
+    labels:
+     - "traefik.frontend.rule=PathPrefixStrip:/redditmediator"
+
   traefik:
     image: "traefik:v1.7.19"
     container_name: "traefik"

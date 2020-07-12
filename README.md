@@ -1,6 +1,16 @@
 # Post Persister
 Project to store reddit posts and sort them by tags
 
+## Configuration
+
+In order to be able to run this project, expose the following environment variables on your host (or set them on the docker-compose.yml file)
+```
+export REDDIT_MEDIATOR_USER_USERNAME=<YOUR REDDIT USER>
+export REDDIT_MEDIATOR_USER_PASSWORD=<YOUR REDDIT USER PASSWORD>
+export REDDIT_MEDIATOR_APP_ID=<YOUR REDDIT APP ID>
+export REDDIT_MEDIATOR_APP_SECRET=<YOUR REDDIT APP SECRET>
+```
+
 ## Installation (assuming a CentOS7 minimal VM)
 
 Enable Docker repository:
