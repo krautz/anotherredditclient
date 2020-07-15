@@ -1,5 +1,8 @@
-# Post Persister
-Project to store reddit posts and sort them by tags
+# ARC - Another Reddit Client
+Project to create a new reddit client, with some features lacking on official one, such as:
+ - Persisting posts (They will be saved even if they are deleted from the subreddit)
+ - Filtering the feed with desired subreddits
+ - Enhanced UI/UX
 
 ## Configuration
 
