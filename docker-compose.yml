@@ -3,10 +3,10 @@ version: "3"
 services:
 
   redditmediator:
-    image: "krautzera/redditmediator:0.1.0"
+    image: "krautzera/redditmediator:0.2.0"
     container_name: "redditmediator"
     expose:
-      - "8080"
+      - "80"
     environment:
       - REDDIT_MEDIATOR_USER_USERNAME
       - REDDIT_MEDIATOR_USER_PASSWORD
