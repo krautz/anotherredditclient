@@ -25,7 +25,7 @@ services:
       - REDDIT_MEDIATOR_APP_ID
       - REDDIT_MEDIATOR_APP_SECRET
     labels:
-     - "traefik.frontend.rule=PathPrefixStrip:/redditmediator"
+      - "traefik.frontend.rule=PathPrefixStrip:/redditmediator"
 
   traefik:
     image: "traefik:v1.7.19"
