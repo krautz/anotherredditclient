@@ -2,6 +2,18 @@ version: "3"
 
 services:
 
+  arcgraphql:
+    image: krautzera/arcgraphql:0.1.0
+    container_name: "arcgraphql"
+    expose:
+      - "4000"
+    environment:
+      - PLAYGROUND_ENDPOINT
+      - REDDIT_MEDIATOR_URL
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/arcgraphql"
+      - "traefik.root.port=4000"
+
   redditmediator:
     image: "krautzera/redditmediator:0.2.0"
     container_name: "redditmediator"
